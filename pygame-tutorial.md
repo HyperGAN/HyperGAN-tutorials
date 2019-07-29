@@ -1,5 +1,7 @@
 # Adding an AI character generator to pygame
 
+![screenshot](assets/pygame-tutorial-1.png)
+
 For this tutorial we'll use a pre-trained [HyperGAN](github.com/hypergan/hypergan) model.
 
 ### Download the tflite generator
@@ -65,8 +67,6 @@ while running:
 pygame.quit()
 ```
 
-
-![screenshot](assets/pygame-tutorial-1.png)
 
 ### Randomize the latent variable
 
