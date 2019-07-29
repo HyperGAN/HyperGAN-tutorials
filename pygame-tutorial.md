@@ -1,4 +1,6 @@
-Use a pretrained generator with pygame.
+# Adding an AI character generator to pygame
+
+For this tutorial we'll use a pre-trained [HyperGAN](github.com/hypergan/hypergan) model.
 
 ### Download the tflite generator
 
