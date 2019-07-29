@@ -5,10 +5,10 @@ Train a GAN and use the generator with pygame.
 
 You should first use the prepackaged generator here:
 
-https://hypergan.s3-us-west-1.amazonaws.com/0.10.1/tutorial1.tflite
+https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite
 
 ```
-wget https://hypergan.s3-us-west-1.amazonaws.com/0.10.1/tutorial1.tflite
+wget https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite
 ```
 
 ### Load the tflite model
