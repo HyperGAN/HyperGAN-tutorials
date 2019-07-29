@@ -130,7 +130,7 @@ You can see all the prepacked configurations with:
 hypergan new . -l
 ```
 
-More information and help can be found in the discord.
+More information and help can be found in the [discord](https://discord.gg/t4WWBPF).
 
 ### References
 
