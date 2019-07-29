@@ -81,6 +81,7 @@ This runs the generator for a new random sample with each press of the space key
 ![screenshot](assets/pygame-tutorial-2.png)
 ![screenshot](assets/pygame-tutorial-3.png)
 ![screenshot](assets/pygame-tutorial-4.png)
+![screenshot](assets/pygame-tutorial-5.png)
 
 ### An issue: this uses the CPU not the GPU.
 
