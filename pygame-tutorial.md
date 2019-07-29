@@ -113,7 +113,7 @@ This will take several hours.  A view will display the training progress.
 You will need to save and quit the model when you are satisfied with the results.
 
 
-### Build the model
+### Build your model
 
 ```sh
 hypergan build
@@ -136,3 +136,5 @@ More information and help can be found in the [discord](https://discord.gg/t4WWB
 ### References
 
 * https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/guide/inference.md#load-and-run-a-model-in-python
+* https://www.github.com/HyperGAN/HyperGAN
+
