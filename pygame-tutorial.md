@@ -76,6 +76,12 @@ if event.type == pygame.KEYDOWN:
       surface = sample()
 ```
 
+This runs the generator for a new random sample with each press of the space key.
+
+![screenshot](assets/pygame-tutorial-2.png)
+![screenshot](assets/pygame-tutorial-3.png)
+![screenshot](assets/pygame-tutorial-4.png)
+
 ### An issue: this uses the CPU not the GPU.
 
 This technique uses the tflite interpreter which was created for mobile devices.
