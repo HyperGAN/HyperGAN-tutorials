@@ -20,7 +20,9 @@ import tensorflow as tf
 # Load TFLite model and allocate tensors.
 interpreter = tf.lite.Interpreter(model_path="tutorial1.tflite")
 interpreter.allocate_tensors()
-
+```
+### Sample the tflite model
+```
 def sample():
   # Get input and output tensors.
   input_details = interpreter.get_input_details()
@@ -37,16 +39,19 @@ def sample():
   # Use `tensor()` in order to get a pointer to the tensor.
   return interpreter.get_tensor(output_details[0]['index'])
 ```
+
 **From https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/guide/inference.md#load-and-run-a-model-in-python **
 
-### Render the model to a bitmap
+### Render the model to a surface
 
 ```python
 import pygame
 pygame.init()
 display = pygame.display.set_mode((350, 350))
 surf = pygame.surfarray.make_surface(sample())
-
+```
+### Display the surface
+```
 running = True
 
 while running:
@@ -59,6 +64,8 @@ pygame.quit()
 ```
 
 ### Randomize the latent variable
+
+In the event loop:
 
 ```
 if event.type == pygame.KEYDOWN:
