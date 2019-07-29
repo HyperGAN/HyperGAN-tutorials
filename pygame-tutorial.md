@@ -2,13 +2,13 @@ Use a pretrained generator with pygame.
 
 ### Download the tflite generator
 
-```
+```sh
 wget https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite
 ```
 
 ### Load the tflite model
 
-```
+```python
 import numpy as np
 import tensorflow as tf
 
@@ -17,7 +17,7 @@ interpreter = tf.lite.Interpreter(model_path="tutorial1.tflite")
 interpreter.allocate_tensors()
 ```
 ### Sample the tflite model to a surface
-```
+```python
 
 def sample():
   # Get input and output tensors.
@@ -51,7 +51,7 @@ display = pygame.display.set_mode((300, 300))
 surface = sample()
 ```
 ### Display the surface
-```
+```python
 running = True
 
 while running:
@@ -70,7 +70,7 @@ pygame.quit()
 
 In the event loop:
 
-```
+```python
 if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_SPACE:
       surface = sample()
@@ -96,7 +96,7 @@ If you want to train a model from scratch, you will need:
 
 ### Train your model
 
-```
+```sh
 hypergan train [dataset]
 ```
 
@@ -107,7 +107,7 @@ You will need to save and quit the model when you are satisfied with the results
 
 ### Build the model
 
-```
+```sh
 hypergan build
 ```
 
@@ -119,7 +119,7 @@ There are many differing configurations you can use to train your GAN and each d
 
 You can see all the prepacked configurations with:
 
-```
+```sh
 hypergan new . -l
 ```
 
