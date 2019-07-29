@@ -1,0 +1,4 @@
+hypergan>=0.10.1
+numpy>=1.17.0
+pygame>=1.9.3
+tensorflow>=2.0.0b1
