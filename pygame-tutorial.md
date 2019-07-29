@@ -1,11 +1,6 @@
+Use a pretrained generator with pygame.
 
-Train a GAN and use the generator with pygame.
-
-### A prepackaged generator
-
-You should first use the prepackaged generator here:
-
-https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite
+### Download the tflite generator
 
 ```
 wget https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite
@@ -46,8 +41,6 @@ def sample():
   result = pygame.transform.rotate(result, -90)
   return result
 ```
-
-**From https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/guide/inference.md#load-and-run-a-model-in-python **
 
 ### Render the model
 
@@ -132,3 +125,6 @@ hypergan new . -l
 
 More information and help can be found in the discord.
 
+### References
+
+* https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/guide/inference.md#load-and-run-a-model-in-python
