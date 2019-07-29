@@ -26,20 +26,18 @@ interpreter.allocate_tensors()
 ```python
 
 def sample():
-  # Get input and output tensors.
   input_details = interpreter.get_input_details()
   output_details = interpreter.get_output_details()
 
-  # Test model on random input data.
+  # Set the 'latent' input tensor.
   input_shape = input_details[0]['shape']
   latent = (np.random.random_sample(input_shape) - 0.5) * 2.0
   input_data = np.array(latent, dtype=np.float32)
   interpreter.set_tensor(input_details[0]['index'], input_data)
 
   interpreter.invoke()
-
-  # The function `get_tensor()` returns a copy of the tensor data.
-  # Use `tensor()` in order to get a pointer to the tensor.
+  
+  # Get the output image and transform it for display
   result = interpreter.get_tensor(output_details[0]['index'])
   result = np.reshape(result, [256,256,3])
   result = (result + 1.0) * 127.5
@@ -48,16 +46,16 @@ def sample():
   return result
 ```
 
-### Render the model
+### Init pygame
 
 ```python
 import pygame
 pygame.init()
 display = pygame.display.set_mode((300, 300))
-surface = sample()
 ```
 ### Display the surface
 ```python
+surface = sample()
 running = True
 
 while running:
@@ -68,7 +66,6 @@ while running:
     pygame.display.update()
 pygame.quit()
 ```
-
 
 ### Randomize the latent variable
 
