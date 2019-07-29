@@ -6,6 +6,8 @@ For this tutorial we'll use a pre-trained [HyperGAN](github.com/hypergan/hyperga
 
 ### Download the tflite generator
 
+Download the generator [https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite](https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite) (13.9 MB)
+
 ```sh
 wget https://hypergan.s3-us-west-1.amazonaws.com/0.10/tutorial1.tflite
 ```
