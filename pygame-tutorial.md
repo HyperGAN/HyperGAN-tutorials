@@ -68,7 +68,7 @@ if event.type == pygame.KEYDOWN:
 
 ### Putting it all together
 
-See (pygame.py)[pygame.py]
+See [pygame-tutorial.py](pygame-tutorial.py)
 
 ## Create your own model
 
