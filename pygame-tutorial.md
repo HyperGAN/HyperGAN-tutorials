@@ -2,7 +2,7 @@
 
 ![screenshot](assets/pygame-tutorial-1.png)
 
-For this tutorial we'll use a pre-trained [HyperGAN](github.com/HyperGAN/HyperGAN) model.
+For this tutorial we'll use a pre-trained [HyperGAN](https://www.github.com/HyperGAN/HyperGAN) model.
 
 ### Download the tflite generator
 
@@ -102,7 +102,7 @@ See [pygame-tutorial.py](pygame-tutorial.py)
 If you want to train a model from scratch, you will need:
 
 * a GPU
-* a [HyperGAN](github.com/HyperGAN/HyperGAN) training environment
+* a [HyperGAN](https://www.github.com/HyperGAN/HyperGAN) training environment
 * a dataset directory of images to train against
 
 ### Train your model
