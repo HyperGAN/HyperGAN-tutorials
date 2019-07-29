@@ -19,7 +19,8 @@ def sample():
 
   # Test model on random input data.
   input_shape = input_details[0]['shape']
-  input_data = np.array(np.random.random_sample(input_shape), dtype=np.float32)
+  latent = (np.random.random_sample(input_shape) - 0.5) * 2.0
+  input_data = np.array(latent, dtype=np.float32)
   interpreter.set_tensor(input_details[0]['index'], input_data)
 
   interpreter.invoke()
@@ -27,14 +28,15 @@ def sample():
   # The function `get_tensor()` returns a copy of the tensor data.
   # Use `tensor()` in order to get a pointer to the tensor.
   result = interpreter.get_tensor(output_details[0]['index'])
-  result = np.reshape(result, [128,128,3])
+  result = np.reshape(result, [256,256,3])
+  result = (result + 1.0) * 127.5
+  result = pygame.surfarray.make_surface(result)
+  result = pygame.transform.rotate(result, -90)
   return result
 
-print(np.shape(sample()))
-
 pygame.init()
-display = pygame.display.set_mode((350, 350))
-surf = pygame.surfarray.make_surface(sample())
+display = pygame.display.set_mode((300, 300))
+surface = sample()
 
 running = True
 
@@ -44,7 +46,7 @@ while running:
             running = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                surf = pygame.surfarray.make_surface(sample())
-    display.blit(surf, (0, 0))
+                surface = sample()
+    display.blit(surface, (22, 22))
     pygame.display.update()
 pygame.quit()
